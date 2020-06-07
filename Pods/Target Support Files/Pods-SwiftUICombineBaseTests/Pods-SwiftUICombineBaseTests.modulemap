@@ -1,0 +1,6 @@
+framework module Pods_SwiftUICombineBaseTests {
+  umbrella header "Pods-SwiftUICombineBaseTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

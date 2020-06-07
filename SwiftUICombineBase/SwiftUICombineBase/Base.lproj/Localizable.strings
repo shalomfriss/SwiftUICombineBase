@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  SwiftUICombineBase
+
+  Created by Shalom Friss on 5/25/20.
+  Copyright © 2020 Shalom Friss. All rights reserved.
+*/
+"test_value" = "test_value_1";

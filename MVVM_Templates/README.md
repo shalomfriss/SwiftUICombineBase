@@ -1,0 +1,13 @@
+![iOS MVVM Templates](/Images/ios_viper_logo.png "iOS VIPER")
+
+# Installation instructions
+
+To install MVVM Xcode templates clone this repo and run the following command from root folder:
+
+> make install_templates
+
+To uninstall Xcode template run:
+
+> make uninstall_templates
+
+After that, restart your Xcode if it was already opened.

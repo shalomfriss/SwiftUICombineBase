@@ -21,6 +21,7 @@
 		44B092CA248D4769002211D0 /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B092C9248D4769002211D0 /* TodoListModel.swift */; };
 		44B092CC248D47BE002211D0 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B092CB248D47BE002211D0 /* LoginModel.swift */; };
 		44B092CE248D4D21002211D0 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B092CD248D4D21002211D0 /* LogManager.swift */; };
+		44B092F6248D5F32002211D0 /* SwiftUICombineBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07554A245B59B5005D1996 /* SwiftUICombineBaseUITests.swift */; };
 		9A728755B82562B5A794DBA2 /* Pods_SwiftUICombineBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D297417E0A1A35EE6C125AE7 /* Pods_SwiftUICombineBase.framework */; };
 		9FF1AE87FC3B85364B3DA364 /* Pods_SwiftUICombineBase_SwiftUICombineBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBA9C866E69AAE70D34C7B5 /* Pods_SwiftUICombineBase_SwiftUICombineBaseUITests.framework */; };
 		CE075526245B59B0005D1996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE075525245B59B0005D1996 /* AppDelegate.swift */; };
@@ -31,7 +32,6 @@
 		CE075532245B59B5005D1996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE075531245B59B5005D1996 /* Preview Assets.xcassets */; };
 		CE075535245B59B5005D1996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE075533245B59B5005D1996 /* LaunchScreen.storyboard */; };
 		CE075540245B59B5005D1996 /* SwiftUICombineBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07553F245B59B5005D1996 /* SwiftUICombineBaseTests.swift */; };
-		CE07554B245B59B5005D1996 /* SwiftUICombineBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07554A245B59B5005D1996 /* SwiftUICombineBaseUITests.swift */; };
 		CE075559245B5AD7005D1996 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE075558245B5AD7005D1996 /* Todo.swift */; };
 		CE075560245B5E7F005D1996 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07555F245B5E7F005D1996 /* DataManager.swift */; };
 		CE075563245B5EE0005D1996 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE075562245B5EE0005D1996 /* TodoListViewModel.swift */; };
@@ -679,7 +679,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE07554B245B59B5005D1996 /* SwiftUICombineBaseUITests.swift in Sources */,
+				44B092F6248D5F32002211D0 /* SwiftUICombineBaseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

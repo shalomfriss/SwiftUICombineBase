@@ -7,10 +7,15 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TodoListView: View {
     @ObservedObject var viewModel = TodoListViewModel()
     @State private var isShowingAddNew = false
+    
+    public init() {
+        
+    }
     
     private var addNewButton: some View {
         Button(action: {
@@ -28,8 +33,14 @@ struct TodoListView: View {
         }
     }
     
+    
     var body: some View {
         NavigationView {
+            Button(action: {
+                self.viewModel.getRedditPosts()
+            }, label: {
+                Image(systemName: self.viewModel.showCompleted ? "checkmark.circle.fill" : "checkmark.circle")
+            })
             List(viewModel.todos) { todo in
                 Button(action: {
                     self.viewModel.toggleIsCompleted(for: todo)

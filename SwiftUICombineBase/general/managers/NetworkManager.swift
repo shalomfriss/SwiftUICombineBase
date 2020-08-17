@@ -103,8 +103,9 @@ class NetworkManager {
                 
                 return futureAsyncPublisher.eraseToAnyPublisher()
             } catch {
+                print("decodingError")
                 let futureAsyncPublisher = Future<T, Error> { promise in
-                    return HTTPError.decodingError
+                    return promise(.failure(HTTPError.decodingError))
                 }
                 
                 return futureAsyncPublisher.eraseToAnyPublisher()

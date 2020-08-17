@@ -14,6 +14,7 @@ protocol TodoListViewModelProtocol {
     var showCompleted: Bool { get set }
     func fetchTodos()
     func toggleIsCompleted(for todo: Todo)
+    func getRedditPosts()
 }
 
 final class TodoListViewModel: ObservableObject {
@@ -28,8 +29,9 @@ final class TodoListViewModel: ObservableObject {
     
     var dataManager: DataManagerProtocol
     
-    var pub:AnyPublisher<PetVO, Error>?
     var cancellable:AnyCancellable?
+    var pub:AnyPublisher<PetVO, Error>?
+    var redditCall:AnyPublisher<RedditPosts, Error>?
     
     init(dataManager: DataManagerProtocol = DataManager.shared) {
         self.dataManager = dataManager
@@ -62,7 +64,28 @@ final class TodoListViewModel: ObservableObject {
         request.httpMethod = "POST"
         
         
+        getRedditPosts()
     }
+    
+    public func getRedditPosts() {
+        let url = API.subredditURL("software", SortBy.new)
+        let net = NetworkManager.shared
+        
+        redditCall = net.getCall(url: url, type: RedditPosts.self)
+        cancellable = redditCall?.sink(receiveCompletion: { complete in
+            switch(complete) {
+            case .finished:
+                print("FINISHED")
+                print(complete)
+            case .failure(let error):
+                print("ERROR")
+                print(error)
+            }
+        }, receiveValue:{ value in
+            print("VALUE", value)
+        })
+    }
+    
 }
 
 // MARK: - TodoListViewModelProtocol
